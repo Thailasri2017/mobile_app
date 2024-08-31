@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:mobileapp/page20.dart';
-import 'package:mobileapp/page3.dart';
-import 'package:mobileapp/page5.dart';
+import 'package:mobileapp/paymentpage5.dart';
+import 'package:mobileapp/homepage.dart';
+import 'package:mobileapp/reviewhomepage.dart';
 
-class Page13 extends StatefulWidget {
-  const Page13({super.key,});
+class Page12 extends StatefulWidget {
+  const Page12({super.key,});
 
   @override
-  State<Page13> createState() => _Page13State();
+  State<Page12> createState() => _Page12State();
 }
 
-class _Page13State extends State<Page13> {
+class _Page12State extends State<Page12> {
   final List<String> gridImages = [
-    'lib/images/Kitchen utensils.jpg',
+    'lib/images/lip shades.png',
   ];
 
   bool _isFavorited = false;
@@ -72,11 +72,11 @@ class _Page13State extends State<Page13> {
               SizedBox(height: 20),
               Container(
                 width: double.infinity,
-                child: Image.asset('lib/images/Kitchen utensils.jpg'),
+                child: Image.asset('lib/images/lip shades.png'),
               ),
               SizedBox(height: 10),
               Text(
-                'Kitchen set utensils',
+                'Dazler Lip Shades',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 10),
@@ -84,7 +84,7 @@ class _Page13State extends State<Page13> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    '₹2270',
+                    '₹170',
                     style: TextStyle(fontSize: 18),
                   ),
                   Row(
@@ -126,7 +126,7 @@ class _Page13State extends State<Page13> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Page20()),
+                        MaterialPageRoute(builder: (context) => Page19()),
                       );
                     },
                     child: Text(

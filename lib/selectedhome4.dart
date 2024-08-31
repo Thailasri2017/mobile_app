@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:mobileapp/page19.dart';
-import 'package:mobileapp/page3.dart';
-import 'package:mobileapp/page5.dart';
+import 'package:mobileapp/paymentpage4.dart';
+import 'package:mobileapp/homepage.dart';
+import 'package:mobileapp/reviewhomepage.dart';
 
-class Page12 extends StatefulWidget {
-  const Page12({super.key,});
+class Page11 extends StatefulWidget {
+  const Page11({super.key,});
 
   @override
-  State<Page12> createState() => _Page12State();
+  State<Page11> createState() => _Page11State();
 }
 
-class _Page12State extends State<Page12> {
+class _Page11State extends State<Page11> {
   final List<String> gridImages = [
-    'lib/images/lip shades.png',
+    'lib/images/perfume.png',
   ];
 
   bool _isFavorited = false;
@@ -72,11 +72,11 @@ class _Page12State extends State<Page12> {
               SizedBox(height: 20),
               Container(
                 width: double.infinity,
-                child: Image.asset('lib/images/lip shades.png'),
+                child: Image.asset('lib/images/perfume.png'),
               ),
               SizedBox(height: 10),
               Text(
-                'Dazler Lip Shades',
+                'Bella Perfumes',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 10),
@@ -84,7 +84,7 @@ class _Page12State extends State<Page12> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    '₹170',
+                    '₹270',
                     style: TextStyle(fontSize: 18),
                   ),
                   Row(
@@ -126,7 +126,7 @@ class _Page12State extends State<Page12> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Page19()),
+                        MaterialPageRoute(builder: (context) => Page18()),
                       );
                     },
                     child: Text(

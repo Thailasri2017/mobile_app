@@ -1,25 +1,27 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:mobileapp/page1.dart';
-import "package:mobileapp/page3.dart";
-import 'package:mobileapp/page4.dart';
-import 'package:mobileapp/page5.dart';
-import 'package:mobileapp/page6.dart';
-import 'package:mobileapp/page7.dart';
+import 'package:mobileapp/signup.dart';
+import "package:mobileapp/homepage.dart";
+import 'package:mobileapp/selectedhome.dart';
+import 'package:mobileapp/reviewhomepage.dart';
+import 'package:mobileapp/orderplacementpage.dart';
+import 'package:mobileapp/orderconfirmationpage.dart';
 import 'package:mobileapp/splashscreenpage.dart';
+import 'package:page_transition/page_transition.dart';
 
 
 
 void main(){
-  runApp(Mainpage());
+  runApp(const MainPage());
 }
-class Mainpage extends StatelessWidget {
-  const Mainpage({super.key});
+class MainPage extends StatelessWidget {
+  const MainPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:SplashScreen(),
       debugShowCheckedModeBanner: false,
-    );
+        home:Splashscreenpage(),
+   );
   }
 }

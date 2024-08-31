@@ -1,195 +1,14 @@
-// import 'package:flutter/material.dart';
-// import 'package:mobileapp/page4.dart';
-//
-// class Page6 extends StatefulWidget {
-//   const Page6({super.key});
-//
-//   @override
-//   State<Page6> createState() => _Page6State();
-// }
-//
-// class _Page6State extends State<Page6> {
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         leading: IconButton(
-//           onPressed: () {},
-//           icon: Icon(Icons.arrow_back_ios_new_sharp),
-//         ),
-//         title: Padding(
-//           padding: const EdgeInsets.only(right:10),
-//           child: Text('PAYMENT METHOD',
-//             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-//           ),
-//         ),
-//       ),
-//       body: SingleChildScrollView(
-//         child: Column(
-//           crossAxisAlignment: CrossAxisAlignment.start,
-//           children: [
-//             Container(
-//               height: 1,
-//               color: Colors.grey,
-//             ),
-//             Padding(
-//               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-//               child: Text('₹827      Cash on Delivery',
-//                 style: TextStyle(fontSize: 16),
-//               ),
-//             ),
-//             RadioGroup<String>.builder(
-//               groupValue: _verticalGroupValue,
-//               onChanged: (value) => setState(() {
-//                 _verticalGroupValue = value;
-//               }),
-//               items: _status,
-//               itemBuilder: (item) => RadioButtonBuilder(
-//                 item,
-//               ),
-//             ),
-//
-//             Container(
-//               height: 1,
-//               color: Colors.grey,
-//             ),
-//             SizedBox(height: 8),
-//             Center(
-//               child: Column(
-//                 children: [
-//                   Text('₹777           Pay Online', style: TextStyle(fontSize: 16),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//             SizedBox(height: 16),
-//             Container(
-//               height: 1,
-//               color: Colors.grey,
-//             ),
-//             SizedBox(height: 8),
-//             Padding(padding: const EdgeInsets.symmetric(horizontal: 16),
-//               child: Row(
-//                 children: [
-//                   Icon(Icons.location_on),
-//                   SizedBox(width: 8),
-//                   Text('Delivery Address'),
-//                   Spacer(),
-//                   TextButton(
-//                     onPressed: () {},
-//                     child: Text('Change'),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//             Padding(
-//               padding: const EdgeInsets.symmetric(horizontal: 16),
-//               child: Column(
-//                 crossAxisAlignment: CrossAxisAlignment.start,
-//                 children: [
-//                   Text('Thailasri S', style: TextStyle(fontSize: 16)),
-//                   Text('16, New Street Madipakkam, Chennai, Tamilnadu, 600091',
-//                     style: TextStyle(fontSize: 14),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//             SizedBox(height: 16),
-//             Container(
-//               height: 1,
-//               color: Colors.grey,
-//             ),
-//             SizedBox(height: 16),
-//             Padding(
-//               padding: const EdgeInsets.symmetric(horizontal: 16),
-//               child: Text('Price Details (1 Item)',
-//                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-//               ),
-//             ),
-//             SizedBox(height: 8),
-//             Padding(
-//               padding: const EdgeInsets.only(right : 20,left: 15),
-//               child: Column(
-//                 crossAxisAlignment: CrossAxisAlignment.start,
-//                 children: [
-//                   Text('Total Product Price                                                   ₹827',
-//                     style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//             SizedBox(height: 16),
-//             Container(
-//               height: 1,
-//               color: Colors.grey,
-//             ),
-//             SizedBox(height: 16),
-//             Padding(
-//               padding: const EdgeInsets.only(right: 5,left:5),
-//               child: Row(
-//                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                 children: [
-//                   Text(
-//                     'Order Total                                                         ₹827',
-//                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//             SizedBox(height: 16),
-//             Container(
-//               height: 1,
-//               color: Colors.grey,
-//             ),
-//             SizedBox(height: 16),
-//             Padding(
-//               padding: const EdgeInsets.symmetric(horizontal: 16),
-//               child: Row(
-//                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                 children: [
-//                   Column(
-//                     children: [
-//                       Text('₹827', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-//                       ),
-//                     ],
-//                   ),
-//                   Column(
-//                     children: [
-//                       TextButton(
-//                         onPressed: () {},
-//                         child: Text('View Price Details',
-//                           style: TextStyle(fontSize: 16, color: Colors.purple),
-//                         ),
-//                       ),
-//                     ],
-//                   ),
-//                   ElevatedButton(
-//                     onPressed: () {},
-//                     child: Text('Continue',
-//                       style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue),),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//             SizedBox(height: 16),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
 import 'package:flutter/material.dart';
-import 'package:mobileapp/page7.dart';
+import 'package:mobileapp/orderconfirmationpage.dart';
 
-class Page6 extends StatefulWidget {
-  const Page6({super.key});
+class Page24 extends StatefulWidget {
+  const Page24({super.key});
 
   @override
-  State<Page6> createState() => _Page6State();
+  State<Page24> createState() => _Page24State();
 }
 
-class _Page6State extends State<Page6> {
+class _Page24State extends State<Page24> {
   String? _selectedPaymentMethod;
   final List<String> _paymentMethods = ['Cash on Delivery', 'Pay Online'];
   String _selectedPriceDetail = 'Total Product Price';
@@ -340,7 +159,7 @@ class _Page6State extends State<Page6> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        '₹827',
+                        '₹350',
                         style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                       ElevatedButton(

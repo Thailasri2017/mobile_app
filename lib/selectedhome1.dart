@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:mobileapp/page17.dart';
-import 'package:mobileapp/page3.dart';
-import 'package:mobileapp/page5.dart';
+import 'package:mobileapp/paymentpage1.dart';
+import 'package:mobileapp/homepage.dart';
+import 'package:mobileapp/reviewhomepage.dart';
 
-class Page10 extends StatefulWidget {
-  const Page10({super.key,});
+class Page8 extends StatefulWidget {
+  const Page8({super.key,});
+
+
 
   @override
-  State<Page10> createState() => _Page10State();
+  State<Page8> createState() => _Page8State();
 }
 
-class _Page10State extends State<Page10> {
+class _Page8State extends State<Page8> {
   final List<String> gridImages = [
-    'lib/images/shoes images.jpg',
+    'lib/images/kurti.jpg',
   ];
 
   bool _isFavorited = false;
@@ -72,11 +74,11 @@ class _Page10State extends State<Page10> {
               SizedBox(height: 20),
               Container(
                 width: double.infinity,
-                child: Image.asset('lib/images/shoes images.jpg'),
+                child: Image.asset('lib/images/kurti.jpg'),
               ),
               SizedBox(height: 10),
               Text(
-                'Casual Shoes for unisex',
+                'Charvi kurtis',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 10),
@@ -84,7 +86,7 @@ class _Page10State extends State<Page10> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    '₹350',
+                    '₹557',
                     style: TextStyle(fontSize: 18),
                   ),
                   Row(
@@ -126,7 +128,7 @@ class _Page10State extends State<Page10> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Page17()),
+                        MaterialPageRoute(builder: (context) => Page15()),
                       );
                     },
                     child: Text(

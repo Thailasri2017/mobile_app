@@ -52,7 +52,7 @@ class Page7 extends StatelessWidget {
               ),
               SizedBox(height: 8),
                 ListTile(
-                  leading: Image.asset('assets/images/designer-silk-saree.jpg', width: 60, height: 60),
+                  leading: Image.asset('lib/images/designer-silk-saree.jpg', width: 60, height: 60),
                   title: Text(order?.itemName ?? 'Soft Silk Saree'),
                   subtitle: Text('Quantity: ${order?.quantity ?? 1 }'),
                   trailing: Text('₹${order?.itemPrice?.toStringAsFixed(2) ?? '827'}',
@@ -60,7 +60,7 @@ class Page7 extends StatelessWidget {
                 ),
                SizedBox(height: 20),
               // Price Breakdown
-              Text(
+                Text(
                 'Price Breakdown',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
@@ -91,7 +91,6 @@ class Page7 extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              // Shipping Information
               Padding(
                 padding: const EdgeInsets.only(top: 15),
                 child: Text(
@@ -101,18 +100,21 @@ class Page7 extends StatelessWidget {
               ),
               SizedBox(height: 20),
               Text(
-                'Shipping Address: ${order?.shippingAddress ?? '16, New street Madipakkam, Chennai, Tamilnadu-600091'}'
+                'Shipping Address: ${order?.shippingAddress ??
+                    '16, New street Madipakkam, Chennai, Tamilnadu-600091'}'
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 15),
                 child: Text(
-                  'Estimated Delivery Date: ${order?.deliveryDate ?? 'Expected delivery by Wednesday'}',
+                  'Estimated Delivery Date: ${order?.deliveryDate ??
+                      'Expected delivery by Wednesday'}',
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 15),
                 child: Text(
-                  'Shipping Method: ${order?.shippingMethod ?? 'Standard Shipping'}'
+                  'Shipping Method: ${order?.shippingMethod ??
+                      'Standard Shipping'}'
                 ),
               ),
               SizedBox(height: 20),
@@ -129,7 +131,8 @@ class Page7 extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 15),
                 child: Text(
-                  'Billing Address: ${order?.billingAddress ?? '16, New street Madipakkam, Chennai, Tamilnadu-600091'}',
+                  'Billing Address: ${order?.billingAddress ??
+                      '16, New street Madipakkam, Chennai, Tamilnadu-600091'}',
                 ),
               ),
               SizedBox(height: 16),
@@ -141,8 +144,7 @@ class Page7 extends StatelessWidget {
                     padding: const EdgeInsets.only(right: 50),
                     child: TextButton(
                       onPressed: () {
-                        // Handle Track My Order action
-                      },
+                        },
                       child: Text(
                         'Track My Order',
                         style: TextStyle(fontSize: 16, color: Colors.blue),
@@ -150,9 +152,7 @@ class Page7 extends StatelessWidget {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {
-                      // Handle View Order History action
-                    },
+                    onPressed: () {},
                     child: Text(
                       'View Order History',
                       style: TextStyle(fontSize: 16, color: Colors.blue),
@@ -162,9 +162,7 @@ class Page7 extends StatelessWidget {
               ),
               SizedBox(height: 20),
               TextButton(
-                onPressed: () {
-                  // Handle Need Help? Contact Us action
-                },
+                onPressed: () {},
                 child: Text(
                   'Need Help? Contact Us',
                   style: TextStyle(fontSize: 16, color: Colors.blue),

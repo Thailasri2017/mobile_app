@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:mobileapp/page25.dart';
-import 'package:mobileapp/page4.dart';
-import 'package:mobileapp/page6.dart';
+import 'package:mobileapp/orderplacementpage1.dart';
+import 'package:mobileapp/selectedhome.dart';
+import 'package:mobileapp/orderplacementpage.dart';
 
-class Page18 extends StatefulWidget {
-  const Page18({super.key,});
+class Page15 extends StatefulWidget {
+  const Page15({super.key,});
 
   @override
-  State<Page18> createState() => _Page18State();
+  State<Page15> createState() => _Page15State();
 }
 
-class _Page18State extends State<Page18> {
+class _Page15State extends State<Page15> {
   final List<String> gridImages = [
-    'lib/images/perfume.png',
+    'lib/images/kurti.jpg',
   ];
 
   @override
@@ -45,7 +45,7 @@ class _Page18State extends State<Page18> {
             ),
             SizedBox(height: 30),
             Center(
-              child: Image.asset('lib/images/perfume.png',
+              child: Image.asset('lib/images/kurti.jpg',
                 height: 150,
                 width: 150,
                 fit: BoxFit.cover,
@@ -55,8 +55,8 @@ class _Page18State extends State<Page18> {
             Center(
               child: Column(
                 children: [
-                  Text('Bella Perfumes', style: TextStyle(fontSize: 16)),
-                  Text( '₹270', style: TextStyle(fontSize: 16)),
+                  Text('Charvi kurtis', style: TextStyle(fontSize: 16)),
+                  Text( '₹557', style: TextStyle(fontSize: 16)),
                   Text('Size: Free size. Qty: 1', style: TextStyle(fontSize: 14)),
                 ],
               ),
@@ -96,19 +96,17 @@ class _Page18State extends State<Page18> {
             SizedBox(height: 8),
             Padding(
               padding: const EdgeInsets.only(left: 8, right: 8),
-              child: Text('Total Product Price: ₹350',
+              child: Text('Total Product Price: ₹557',
                 style: TextStyle(fontSize: 14),
               ),
             ),
             SizedBox(height: 16),
             Divider(color: Colors.grey),
             SizedBox(height: 16),
-
-            // Order Total
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Order Total: ₹270',
+                Text('Order Total: ₹557',
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
                 ElevatedButton(
@@ -116,7 +114,7 @@ class _Page18State extends State<Page18> {
                     backgroundColor: Colors.blue,
                   ),
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Page25()),
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Page22()),
                     );
                   },
                   child: Text('Continue',
@@ -129,7 +127,7 @@ class _Page18State extends State<Page18> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('₹270',
+                Text('₹557',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
                 TextButton(

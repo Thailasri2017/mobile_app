@@ -1,90 +1,6 @@
-// import 'package:flutter/material.dart';
-// import 'package:mobileapp/page1.dart';
-// import 'package:mobileapp/page3.dart';
-// import 'package:http/http.dart' as http;
-//
-// class LoginPage extends StatefulWidget {
-//   @override
-//   _LoginPageState createState() => _LoginPageState();
-// }
-//
-// class _LoginPageState extends State<LoginPage> {
-//   final _usernameController = TextEditingController();
-//   final _passwordController = TextEditingController();
-//   final _formKey = GlobalKey<FormState>();
-//
-//   void _login() async {
-//     if (_formKey.currentState?.validate() ?? false) {
-//       final url = 'https://example.com/api/login';
-//
-//
-//       final username = _usernameController.text;
-//       final password = _passwordController.text;
-//
-//
-//       final response = await http.post(
-//         Uri.parse(url),
-//         headers: {'Content-Type': 'application/json'},
-//         body: jsonEncode({'username': username, 'password': password}),
-//       );
-//
-//       if (response.statusCode == 200) {
-//
-//         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Login successful!')));
-//       } else
-//         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Login failed')));
-//       }
-//     }
-//   }
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(title: Text('Login')),
-//       body: Padding(
-//         padding: const EdgeInsets.all(16.0),
-//         child: Form(
-//           key: _formKey,
-//           child: Column(
-//             children: [
-//               TextFormField(
-//                 controller: _usernameController,
-//                 decoration: InputDecoration(labelText: 'Username'),
-//                 validator: (value) {
-//                   if (value == null || value.isEmpty) {
-//                     return 'Please enter a username';
-//                   }
-//                   return null;
-//                 },
-//               ),
-//               TextFormField(
-//                 controller: _passwordController,
-//                 decoration: InputDecoration(labelText: 'Password'),
-//                 obscureText: true,
-//                 validator: (value) {
-//                   if (value == null || value.isEmpty) {
-//                     return 'Please enter a password';
-//                   }
-//                   return null;
-//                 },
-//               ),
-//               SizedBox(height: 20),
-//               ElevatedButton(
-//                 onPressed: _login,
-//                 child: Text('Login'),
-//               ),
-//             ],
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
-
-
 import 'package:flutter/material.dart';
-import 'package:mobileapp/page1.dart';
-import 'package:mobileapp/page3.dart';
+import 'package:mobileapp/signup.dart';
+import 'package:mobileapp/homepage.dart';
 import 'package:http/http.dart' as http;
 
 class Page2 extends StatefulWidget {
@@ -96,6 +12,7 @@ class _Page2State extends State<Page2> {
   final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
+
 
   bool isLoading = false;
 
@@ -144,11 +61,18 @@ class _Page2State extends State<Page2> {
   }
   @override
   Widget build(BuildContext context) {
+
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
+
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Mayura Shopping App',
-          style: TextStyle(fontSize: 20, color: Colors.pinkAccent),
+        title: Padding(
+          padding: const EdgeInsets.only(right:120,left: 10),
+          child: Text(
+            'MEESHO',
+            style: TextStyle(fontSize: 20, color: Colors.purple,fontWeight: FontWeight.bold),
+          ),
         ),
         leading: IconButton(
           onPressed: () {
@@ -159,20 +83,18 @@ class _Page2State extends State<Page2> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding:  EdgeInsets.symmetric(horizontal: width * 0.05),
         child: Form(
           key: _formKey,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(
-                'Please Login to continue',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 16),
-              Text(
-                'Enter your mobile number or email address',
-                style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'Please Login to continue',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold,color: Colors.purple.shade300),
+                ),
               ),
               SizedBox(height: 24),
               TextFormField(
@@ -200,6 +122,9 @@ class _Page2State extends State<Page2> {
                   labelText: 'Password',
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30),
+                    borderSide: BorderSide(
+                      color: Colors.purple.shade200
+                    )
                   ),
                 ),
                 obscureText: true,
@@ -217,14 +142,15 @@ class _Page2State extends State<Page2> {
                   onPressed: () {},
                   child: Text(
                     'Forgotten password?',
-                    style: TextStyle(fontSize: 16, color: Colors.red),
+                    style: TextStyle(fontSize: 16, color: Colors.purple.shade200,
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
-              SizedBox(height: 24),
+              SizedBox(height: 14),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue.shade800,
+                  backgroundColor: Colors.purple.shade400,
                 ),
                 onPressed: () {
                   if (_formKey.currentState?.validate() ?? false) {
@@ -241,15 +167,29 @@ class _Page2State extends State<Page2> {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 100),
                   child: Text(
-                    'Continue',
-                    style: TextStyle(color: Colors.white),
+                    'Login',
+                    style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.only(left: 40,top: 30),
+                child: Row(
+                  children: [
+                    Text('Do not have an account ?',style: TextStyle(
+                      fontSize: 18,color: Colors.purple.shade300,fontWeight: FontWeight.bold
+                    ),),
+                    TextButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Page1()));
+                    }, child: Text('Sign up',
+                      style: TextStyle(color: Colors.purple.shade300,fontWeight: FontWeight.bold,
+                      fontSize: 18),)),
+                  ],
+                ),
+              )
             ],
           ),
-
-        ),
+         ),
       ),
     );
   }

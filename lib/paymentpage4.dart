@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:mobileapp/page4.dart';
-import 'package:mobileapp/page6.dart';
+import 'package:mobileapp/orderplacementpage4.dart';
+import 'package:mobileapp/selectedhome.dart';
+import 'package:mobileapp/orderplacementpage.dart';
 
-class Page5 extends StatefulWidget {
-  const Page5({super.key,});
+class Page18 extends StatefulWidget {
+  const Page18({super.key,});
 
   @override
-  State<Page5> createState() => _Page5State();
+  State<Page18> createState() => _Page18State();
 }
 
-class _Page5State extends State<Page5> {
+class _Page18State extends State<Page18> {
   final List<String> gridImages = [
-    'lib/images/designer-silk-saree.jpg',
+    'lib/images/perfume.png',
   ];
 
   @override
@@ -39,14 +40,14 @@ class _Page5State extends State<Page5> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Divider(color: Colors.grey),
-            Text('Estimated Delivery by Sunday, 4th August',
+            Text('Estimated Delivery by Sunday, 31st August',
               style: TextStyle(fontSize: 14),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 30),
             Center(
-              child: Image.asset('lib/images/designer-silk-saree.jpg',
-                height: 120,
-                width: 120,
+              child: Image.asset('lib/images/perfume.png',
+                height: 150,
+                width: 150,
                 fit: BoxFit.cover,
               ),
             ),
@@ -54,8 +55,8 @@ class _Page5State extends State<Page5> {
             Center(
               child: Column(
                 children: [
-                  Text('Soft silk saree', style: TextStyle(fontSize: 16)),
-                  Text('₹827', style: TextStyle(fontSize: 16)),
+                  Text('Bella Perfumes', style: TextStyle(fontSize: 16)),
+                  Text( '₹270', style: TextStyle(fontSize: 16)),
                   Text('Size: Free size. Qty: 1', style: TextStyle(fontSize: 14)),
                 ],
               ),
@@ -95,7 +96,7 @@ class _Page5State extends State<Page5> {
             SizedBox(height: 8),
             Padding(
               padding: const EdgeInsets.only(left: 8, right: 8),
-              child: Text('Total Product Price: ₹827',
+              child: Text('Total Product Price: ₹350',
                 style: TextStyle(fontSize: 14),
               ),
             ),
@@ -107,7 +108,7 @@ class _Page5State extends State<Page5> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Order Total: ₹827',
+                Text('Order Total: ₹270',
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
                 ElevatedButton(
@@ -115,7 +116,7 @@ class _Page5State extends State<Page5> {
                     backgroundColor: Colors.blue,
                   ),
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Page6()),
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Page25()),
                     );
                   },
                   child: Text('Continue',
@@ -128,7 +129,7 @@ class _Page5State extends State<Page5> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('₹827',
+                Text('₹270',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
                 TextButton(

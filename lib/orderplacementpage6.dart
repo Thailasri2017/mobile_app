@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:mobileapp/page7.dart';
+import 'package:mobileapp/orderconfirmationpage.dart';
 
-class Page28 extends StatefulWidget {
-  const Page28({super.key});
+class Page27 extends StatefulWidget {
+  const Page27({super.key});
 
   @override
-  State<Page28> createState() => _Page28State();
+  State<Page27> createState() => _Page27State();
 }
 
-class _Page28State extends State<Page28> {
+class _Page27State extends State<Page27> {
   String? _selectedPaymentMethod;
   final List<String> _paymentMethods = ['Cash on Delivery', 'Pay Online'];
   String _selectedPriceDetail = 'Total Product Price';
@@ -159,7 +159,7 @@ class _Page28State extends State<Page28> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        '₹370',
+                        '₹2270',
                         style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                       ElevatedButton(

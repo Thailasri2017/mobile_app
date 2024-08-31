@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:mobileapp/page21.dart';
-import 'package:mobileapp/page3.dart';
-import 'package:mobileapp/page5.dart';
+import 'package:mobileapp/paymentpage6.dart';
+import 'package:mobileapp/homepage.dart';
+import 'package:mobileapp/reviewhomepage.dart';
 
-class Page14 extends StatefulWidget {
-  const Page14({super.key,});
+class Page13 extends StatefulWidget {
+  const Page13({super.key,});
 
   @override
-  State<Page14> createState() => _Page14State();
+  State<Page13> createState() => _Page13State();
 }
 
-class _Page14State extends State<Page14> {
+class _Page13State extends State<Page13> {
   final List<String> gridImages = [
-    'lib/images/jewells.jpg',
+    'lib/images/Kitchen utensils.jpg',
   ];
 
   bool _isFavorited = false;
@@ -72,11 +72,11 @@ class _Page14State extends State<Page14> {
               SizedBox(height: 20),
               Container(
                 width: double.infinity,
-                child: Image.asset('lib/images/jewells.jpg'),
+                child: Image.asset('lib/images/Kitchen utensils.jpg'),
               ),
               SizedBox(height: 10),
               Text(
-                'Jewellery sets',
+                'Kitchen set utensils',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 10),
@@ -84,7 +84,7 @@ class _Page14State extends State<Page14> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    '₹370',
+                    '₹2270',
                     style: TextStyle(fontSize: 18),
                   ),
                   Row(
@@ -126,7 +126,7 @@ class _Page14State extends State<Page14> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Page21()),
+                        MaterialPageRoute(builder: (context) => Page20()),
                       );
                     },
                     child: Text(

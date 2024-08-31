@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:mobileapp/page27.dart';
-import 'package:mobileapp/page4.dart';
-import 'package:mobileapp/page6.dart';
+import 'package:mobileapp/orderplacementpage7.dart';
+import 'package:mobileapp/selectedhome.dart';
+import 'package:mobileapp/orderplacementpage.dart';
 
-class Page20 extends StatefulWidget {
-  const Page20({super.key,});
+class Page21 extends StatefulWidget {
+  const Page21({super.key,});
 
   @override
-  State<Page20> createState() => _Page20State();
+  State<Page21> createState() => _Page21State();
 }
 
-class _Page20State extends State<Page20> {
+class _Page21State extends State<Page21> {
   final List<String> gridImages = [
-    'lib/images/Kitchen utensils.jpg',
+    'lib/images/jewells.jpg',
   ];
 
   @override
@@ -45,7 +45,7 @@ class _Page20State extends State<Page20> {
             ),
             SizedBox(height: 30),
             Center(
-              child: Image.asset('lib/images/Kitchen utensils.jpg',
+              child: Image.asset('lib/images/jewells.jpg',
                 height: 150,
                 width: 150,
                 fit: BoxFit.cover,
@@ -55,8 +55,8 @@ class _Page20State extends State<Page20> {
             Center(
               child: Column(
                 children: [
-                  Text('Kitchen set utensils', style: TextStyle(fontSize: 16)),
-                  Text( '₹2270', style: TextStyle(fontSize: 16)),
+                  Text('Jewellery Sets', style: TextStyle(fontSize: 16)),
+                  Text( '₹370', style: TextStyle(fontSize: 16)),
                   Text('Size: Free size. Qty: 1', style: TextStyle(fontSize: 14)),
                 ],
               ),
@@ -96,7 +96,7 @@ class _Page20State extends State<Page20> {
             SizedBox(height: 8),
             Padding(
               padding: const EdgeInsets.only(left: 8, right: 8),
-              child: Text('Total Product Price: ₹2270',
+              child: Text('Total Product Price: ₹370',
                 style: TextStyle(fontSize: 14),
               ),
             ),
@@ -108,7 +108,7 @@ class _Page20State extends State<Page20> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Order Total: ₹2270',
+                Text('Order Total: ₹370',
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
                 ElevatedButton(
@@ -116,7 +116,7 @@ class _Page20State extends State<Page20> {
                     backgroundColor: Colors.blue,
                   ),
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Page27()),
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Page28()),
                     );
                   },
                   child: Text('Continue',
@@ -129,7 +129,7 @@ class _Page20State extends State<Page20> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('₹2270',
+                Text('₹370',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
                 TextButton(
